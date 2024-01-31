@@ -26,12 +26,10 @@ return (<>
     {/*<ambientLight es para poner luz a la escena*/}
     <ambientLight />
     {/*dentro del mesh se dibuja la figura, que en este caso es un cubo (box)*/}
-    <mesh ref={cubeRef}>
+    <mesh ref={cubeRef} position={[-2, 0, 0]}>
         <boxGeometry args={[2, 2, 2]}/>
         <meshStandardMaterial color='hotpink' />
     </mesh>
-     
-
     </>
 
 )

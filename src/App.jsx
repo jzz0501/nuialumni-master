@@ -5,12 +5,12 @@ import VozEj2 from './components/VozEj2'
 import Gestos from './components/Gestos'
 import AR from './components/AR'
 import Home from './components/Home'
-import MyAR from './components/MyAR'
 
 //import Pruebas from './components/Pruebas'
 //importamos la función createBrowserRouter y el componente RouterProvider
 //de la librería react-router-dom
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import AR3D from './components/MyAR'
 
 
 const router = createBrowserRouter([
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
         element: <AR />
       },
       {
-        path: '/myar',
-        element: <MyAR />
+        path: '/3dar',
+        element: <AR3D />
       }
     ]
   }

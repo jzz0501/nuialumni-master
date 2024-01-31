@@ -1,7 +1,7 @@
 import Dashboard from './Dashboard'
 import EjMyAR from './ar/EjMyAR'
 
-function MyAR() {
+function AR3D() {
     return (
         <> 
         <Dashboard/>
@@ -10,4 +10,4 @@ function MyAR() {
     );
   }
   
-  export default MyAR;
+  export default AR3D;

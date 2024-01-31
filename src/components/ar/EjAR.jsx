@@ -14,6 +14,7 @@ function EjAR(){
           <Canvas>
               <XR>
                   <XrCube />
+                  <XrCono />
               </XR>
           </Canvas>
         </>

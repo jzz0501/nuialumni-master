@@ -25,7 +25,7 @@ function Dashboard() {
                         </Grid>
 
                         <Grid item xs={12} md={2} lg={2}>        
-                            <Link to={'/myar'} style={{textDecoration:'none', color:'white'}}>AR</Link>
+                            <Link to={'/3dar'} style={{textDecoration:'none', color:'white'}}>AR3D</Link>
                         </Grid>
 
                         
