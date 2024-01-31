@@ -6,7 +6,7 @@ import Texto from './Texto'
 
 export default function EjGestos() {
   const [label, setLabel] = useState(null);
-
+  const [bgcolor, setBgcolor] = useState('pink')
   
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -55,17 +55,14 @@ export default function EjGestos() {
 
       if (label === "open") {
         console.log("scrolling down");
-      
         window.scrollBy(0, window.innerHeight);
       } else if (label === "closed") {
         console.log("scrolling up");
-      
         window.scrollBy(0, -window.innerHeight);
-      } 
-      else 
-      {
+      } else if(label === "point") {
+        setBgcolor(bgcolor === 'pink'? 'green' : 'pink')
+      } else {
         console.log("detecting...");
-      
       }
     }
   };
@@ -75,14 +72,14 @@ export default function EjGestos() {
         <div style = {{
           alignItems: 'center',
           display: 'flex',
-          backgroundColor: 'pink',
+          backgroundColor: bgcolor,
           flexDirection: 'column',
           }}>
             <div>
                 <h3> Ejemplo Detección Gestos Mano: abierta y cerrada </h3>
                 <p> Tienes que conceder acceso a la webcam </p>
             </div>
-            <div >
+            <div>
                 <Webcam
                     ref={webcamRef}
                     style={{
@@ -101,9 +98,6 @@ export default function EjGestos() {
       </div>
 
       <Texto />
-      
-
-
     </>
   );
 }

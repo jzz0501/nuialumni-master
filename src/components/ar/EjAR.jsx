@@ -10,15 +10,12 @@ function EjAR(){
 
     return(
         <>
-            <ARButton/>
-            <Canvas>
-                <XR>
-                    <XrCono />
-                </XR>
-                <XR>
-                    <XrCube />
-                </XR>
-            </Canvas>
+          <ARButton/>
+          <Canvas>
+              <XR>
+                  <XrCube />
+              </XR>
+          </Canvas>
         </>
 )
 

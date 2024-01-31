@@ -7,6 +7,7 @@ const VozOrdenes = () => {
   const [playing, setPlaying] = useState(false)
   const [mute, setMute] = useState(false)
   const [rate, setRate] = useState(1)
+  const [video, setVideo] = useState(1)
 
   const commands = [
     {
@@ -27,10 +28,18 @@ const VozOrdenes = () => {
     },
     {
       command: 'Next.',
-      callback: () => setRate(rate + 1)
+      callback: () => { if(video<3) {setVideo(video + 1)} }
     },
     {
       command: 'Back.',
+      callback: () => { if(video>0) {setVideo(video - 1)} }
+    },
+    {
+      command: 'Quick.',
+      callback: () => setRate(rate + 1)
+    },
+    {
+      command: 'Slow.',
       callback: () => setRate(rate - 1)
     }
   ]
@@ -44,15 +53,17 @@ const VozOrdenes = () => {
     <div>
       <button onClick={SpeechRecognition.startListening}>Start</button>
       <button onClick={SpeechRecognition.stopListening}>Stop</button>
-      <p>{transcript}</p>
+      <p>You did: {transcript}</p>
       <div className='App' style={{width: '100%', height: '100%', position: 'absolute'}}>
+        <p>current rate: {rate}</p>
         <ReactPlayer
-          url={require('../../video/Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack.mp4')}
+          url={require(`./video/${video}.mp4`)}
           width='100%'
           height='100%'
           playing={playing}
           muted={mute}
           playbackRate={rate}
+          controls
         />
       </div>
     </div>
