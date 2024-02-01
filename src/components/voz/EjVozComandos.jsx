@@ -55,12 +55,12 @@ const VozOrdenes = () => {
       <button onClick={SpeechRecognition.startListening}>Start</button>
       <button onClick={SpeechRecognition.stopListening}>Stop</button>
       <p>You said: {transcript}</p>
-      <p>Start-reproducir / Stop-parar / Mute-mutear / Unmute-desmutear / Quick-acelerar / Slow-desacelerar / Next-siguiente / back-anterior</p>
+      <p>Start-reproducir / Stop-parar / Mute-mutear / Unmute-desmutear / Quick-acelerar / Slow-desacelerar / Next-siguiente / Back-anterior</p>
       <div className='App' style={{width: '100%', height: '100%', position: 'absolute'}}>
         <p>current rate: {rate}</p>
         <span>
-            <Button variant={video===1? 'contained': ''} onClick={ () => {setVideo(1)} }>video 1</Button>
-            <Button variant={video===2? 'contained': ''} onClick={ () => {setVideo(2)} }>video 2</Button>
+            <Button variant={video===1? 'contained': null} onClick={ () => {setVideo(1)} }>video 1</Button>
+            <Button variant={video===2? 'contained': null} onClick={ () => {setVideo(2)} }>video 2</Button>
         </span>
         <ReactPlayer
           url={require(`./video/${video}.mp4`)}
