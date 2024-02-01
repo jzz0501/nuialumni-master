@@ -1,11 +1,11 @@
 import Dashboard from './Dashboard'
-import EjMyAR from './ar/EjMyAR'
+import EjAR3D from './ar/EjAR3D';
 
 function AR3D() {
     return (
         <> 
-        <Dashboard/>
-        <EjMyAR/>
+            <Dashboard/>
+            <EjAR3D/>
         </>
     );
   }

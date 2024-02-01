@@ -10,7 +10,7 @@ import Home from './components/Home'
 //importamos la función createBrowserRouter y el componente RouterProvider
 //de la librería react-router-dom
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import AR3D from './components/MyAR'
+import AR3D from './components/AR3D'
 
 
 const router = createBrowserRouter([

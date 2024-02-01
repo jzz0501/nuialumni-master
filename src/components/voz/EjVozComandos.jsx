@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 import ReactPlayer from 'react-player'
+import { Button } from '@mui/material'
 
 const VozOrdenes = () => {
 
@@ -23,7 +24,7 @@ const VozOrdenes = () => {
       callback: () => setMute(true)
     },
     {
-      command: 'No mute.',
+      command: 'Unmute.',
       callback: () => setMute(false)
     },
     {
@@ -53,9 +54,14 @@ const VozOrdenes = () => {
     <div>
       <button onClick={SpeechRecognition.startListening}>Start</button>
       <button onClick={SpeechRecognition.stopListening}>Stop</button>
-      <p>You did: {transcript}</p>
+      <p>You said: {transcript}</p>
+      <p>Start-reproducir / Stop-parar / Mute-mutear / Unmute-desmutear / Quick-acelerar / Slow-desacelerar / Next-siguiente / back-anterior</p>
       <div className='App' style={{width: '100%', height: '100%', position: 'absolute'}}>
         <p>current rate: {rate}</p>
+        <span>
+            <Button variant={video===1? 'contained': ''} onClick={ () => {setVideo(1)} }>video 1</Button>
+            <Button variant={video===2? 'contained': ''} onClick={ () => {setVideo(2)} }>video 2</Button>
+        </span>
         <ReactPlayer
           url={require(`./video/${video}.mp4`)}
           width='100%'

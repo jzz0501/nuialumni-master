@@ -4,8 +4,8 @@ import EjAR from './ar/EjAR'
 function AR() {
     return (
         <> 
-        <Dashboard/>
-        <EjAR />
+            <Dashboard/>
+            <EjAR />
         </>
     );
   }
