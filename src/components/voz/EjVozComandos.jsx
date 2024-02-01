@@ -29,11 +29,11 @@ const VozOrdenes = () => {
     },
     {
       command: 'Next.',
-      callback: () => { if(video<3) {setVideo(video + 1)} }
+      callback: () => { if(video<2) {setVideo(video + 1)} }
     },
     {
       command: 'Back.',
-      callback: () => { if(video>0) {setVideo(video - 1)} }
+      callback: () => { if(video>1) {setVideo(video - 1)} }
     },
     {
       command: 'Quick.',
